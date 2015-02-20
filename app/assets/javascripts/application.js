@@ -12,4 +12,8 @@
 //
 //= require bootstrap-sprockets
 
-window.roseSeller = angular.module('RoseSeller', []);
+window.roseSeller = angular.module('RoseSeller', ['restangular']);
+window.roseSeller.config(function(RestangularProvider) {
+  RestangularProvider.setBaseUrl('/api/v1');
+  RestangularProvider.setRequestSuffix('.json');
+});
