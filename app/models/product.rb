@@ -4,11 +4,4 @@ class Product < ActiveRecord::Base
 
   scope :highlighted, -> {where(offer:  true)}
 
-  def to_builder
-    Jbuilder.new do |product|
-      product.description :description
-      product.caption :caption
-      product.image url_for(:image)
-    end
-  end
 end

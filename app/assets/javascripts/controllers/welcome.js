@@ -2,7 +2,7 @@
 // All this logic will automatically be available in application.js.
 
 window.roseSeller.controller('WelcomeController', ['$scope', 'Restangular',  function($scope, Restangular) {
-  var responseData = Restangular.all('products/highlight_products');
+  var responseData = Restangular.all('products').all('highlighted');
   responseData.getList().then(function(products) {
     $scope.allProducts = products;
   });

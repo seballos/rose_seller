@@ -23,6 +23,10 @@ gem 'thin'
 
 gem 'paperclip'
 
+gem 'devise'
+
+gem "minitest-rails"
+
 group :development do
   gem 'pry'
 end
