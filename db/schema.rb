@@ -16,14 +16,6 @@ ActiveRecord::Schema.define(version: 20150227143348) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "bills", force: :cascade do |t|
-    t.integer  "number"
-    t.date     "date"
-    t.string   "status"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "products", force: :cascade do |t|
     t.string   "sku"
     t.string   "name"

@@ -25,10 +25,10 @@ gem 'paperclip'
 
 gem 'devise'
 
-gem "minitest-rails"
-
-group :development do
+group :development, :test do
   gem 'pry'
+  gem 'capybara'
+  gem 'capybara-webkit'
 end
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
