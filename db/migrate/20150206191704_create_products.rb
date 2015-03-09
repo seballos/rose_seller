@@ -5,7 +5,7 @@ class CreateProducts < ActiveRecord::Migration
       t.string :name
       t.boolean :offer
       t.string :caption
-      t.text :description
+      t.string :description
 
       t.timestamps null: false
     end

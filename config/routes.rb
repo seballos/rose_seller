@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
 
+  devise_for :users
+  resources :products
+
   get 'products/create'
 
   get 'products/list'
@@ -11,11 +14,15 @@ Rails.application.routes.draw do
   root 'welcome#index'
 
   namespace :api do
-    resources :product
+    namespace :v1 do
+      resources :products do
+        get 'highlighted', on: :collection
+      end
+    end
   end
 
 
-  resources :product
+  resources :products
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

@@ -23,8 +23,12 @@ gem 'thin'
 
 gem 'paperclip'
 
-group :development do
+gem 'devise'
+
+group :development, :test do
   gem 'pry'
+  gem 'capybara'
+  gem 'capybara-webkit'
 end
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

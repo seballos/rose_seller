@@ -1,4 +1,7 @@
 class Product < ActiveRecord::Base
-  has_attached_file :image, :styles => { :medium => "900x600>", :thumb => "100x100>" }, :default_url => "/images/:style/missing.png"
+  has_attached_file :image, :styles => { :medium => "900x600>", :thumb => "100x100>" }, :default_url => "/assets/missing.png"
   validates_attachment_content_type :image, :content_type => /\Aimage\/.*\Z/
+
+  scope :highlighted, -> {where(offer:  true)}
+
 end

@@ -1,0 +1,36 @@
+<div class="container">
+  <p id="notice"><%= notice %></p>
+
+  <p>
+    <strong>Sku:</strong>
+    <%= @product.sku %>
+  </p>
+
+  <p>
+    <strong>Name:</strong>
+    <%= @product.name %>
+  </p>
+
+  <p>
+    <strong>Offer:</strong>
+    <%= @product.offer %>
+  </p>
+
+  <p>
+    <strong>Caption:</strong>
+    <%= @product.caption %>
+  </p>
+
+  <p>
+    <strong>Description:</strong>
+    <%= @product.description %>
+  </p>
+
+  <p>
+    <strong>Image:</strong>
+    <%= image_tag @product.image.url(:thumb) %>
+  </p>
+
+  <%= link_to 'Edit', edit_product_path(@product) %> |
+  <%= link_to 'Back', products_path %>
+</div>
